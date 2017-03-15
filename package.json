@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "client-side-render-with-external-deps",
+  "version": "1.0.0",
+  "description": "Reproducing an issue with OC whereby external dependencies error out during client side rendering.",
+  "scripts": {
+    "start": "oc dev ./../"
+  },
+  "devDependencies": {
+    "oc": "^0.36.4"
+  },
+  "oc": {
+    "files": {
+      "data": "server.js",
+      "template": {
+        "src": "template.html",
+        "type": "handlebars"
+      },
+      "static": ["public"]
+    }
+  }
+}
