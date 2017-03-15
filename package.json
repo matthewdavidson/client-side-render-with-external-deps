@@ -4,10 +4,13 @@
   "version": "1.0.0",
   "description": "Reproducing an issue with OC whereby external dependencies error out during client side rendering.",
   "scripts": {
-    "start": "oc dev ./../"
+    "start": "oc dev ./../",
+    "testharness": "node testharness.js"
   },
   "devDependencies": {
-    "oc": "^0.36.4"
+    "express": "^4.15.2",
+    "oc": "^0.36.4",
+    "oc-client": "^2.1.1"
   },
   "oc": {
     "files": {
@@ -16,7 +19,9 @@
         "src": "template.html",
         "type": "handlebars"
       },
-      "static": ["public"]
+      "static": [
+        "public"
+      ]
     }
   }
 }
